@@ -27,6 +27,7 @@ public class RuleController {
         Stage stage=(Stage) ruleBack.getScene().getWindow();
         stage.setTitle("Добиваемся знаний");
         stage.setScene(new Scene(root, 960, 540));
+        stage.setResizable(false);
         stage.show();
     }
 

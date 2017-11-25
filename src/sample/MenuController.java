@@ -18,21 +18,18 @@ public class MenuController {
     }
 
     @FXML
-    private Button butt;
-    @FXML
     private Label menu;
-    @FXML
-    private Button rule;
     @FXML
     public void start() {
         menu.setText("Стартуем!");
     }
     @FXML
     public void toFight() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Fight.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Selection.fxml"));
         Stage stage=(Stage) menu.getScene().getWindow();
-        stage.setTitle("Добиваемся знаний");
-        stage.setScene(new Scene(root, 900, 540));
+        stage.setTitle("Жизнь в ИТИСе");
+        stage.setScene(new Scene(root, 960, 540));
+        stage.setResizable(false);
         stage.show();
     }
     public void toRules() throws IOException {
@@ -40,6 +37,7 @@ public class MenuController {
         Stage stage = (Stage) menu.getScene().getWindow();
         stage.setTitle("Правило");
         stage.setScene(new Scene(root, 960, 540));
+        stage.setResizable(false);
         stage.show();
     }
     public void toExit() {

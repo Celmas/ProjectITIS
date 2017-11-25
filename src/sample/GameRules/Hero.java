@@ -6,21 +6,25 @@ import sample.GameRules.Bufs.Energetic;
 import sample.GameRules.Skills.Thinking;
 
 public class Hero extends UnitForm {
-    protected Skill buffs[];
+    protected Skill buffs[] = {new Cheat(), new Coffee(), new Energetic()};
     protected Skill skills[];
     protected int lvl;
     protected int i;
     protected int realHP;
     public int countOfBuffs[];
     private boolean isDead = false;
+    private static final Hero instance;
 
-    public Hero(String name, int hp) {
+    static {
+        instance = new Hero("Задрот", 500);
+    }
+
+    private Hero(String name, int hp) {
         super(name, hp);
         realHP = hp;
         lvl = 0;
         skills = new Skill[5];
         skills[0] = new Thinking();
-        buffs = new Skill[]{new Cheat(), new Coffee(), new Energetic()};
         i = 1;
         countOfBuffs = new int[3];
         for (int i = 0; i < countOfBuffs.length;i++ ){
@@ -31,6 +35,7 @@ public class Hero extends UnitForm {
     public void upLVL(){
         lvl+=1;
         dmg+=10;
+        realHP += 50;
     }
     public void addSkill(Skill skill){
         skills[i] = skill;
@@ -46,9 +51,15 @@ public class Hero extends UnitForm {
         }
     }
 
-    public void sleep(){
-        this.hp += 50;
+    public void sleep(int x){
+        this.hp += x;
+        testHP();
     }
+
+    public int getRealHP() {
+        return realHP;
+    }
+
     public boolean isDead() {
         return isDead;
     }
@@ -65,11 +76,19 @@ public class Hero extends UnitForm {
         return skills;
     }
 
+    public Skill[] getBuffs() {
+        return buffs;
+    }
+
     public void setSkills(Skill[] skills) {
         this.skills = skills;
     }
 
     public int getI() {
         return i;
+    }
+
+    public static Hero getInstance() {
+        return instance;
     }
 }

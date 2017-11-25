@@ -1,6 +1,6 @@
 package sample.GameRules;
 
-public class Skill {
+public  class Skill {
     protected String name;
 
     public Skill(String name) {
@@ -11,7 +11,8 @@ public class Skill {
         return name;
     }
 
-    public int use(){
-        return 0;
-    }
+    public int use(){return 0;};
+    public void use(Teacher teacher){};
+
+    public String notification(){return "Вы поразили на ";};
 }

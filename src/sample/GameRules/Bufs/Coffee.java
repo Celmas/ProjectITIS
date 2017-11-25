@@ -2,17 +2,22 @@ package sample.GameRules.Bufs;
 
 import sample.GameRules.Hero;
 import sample.GameRules.Skill;
+import sample.GameRules.Teacher;
+import sample.GameRules.UnitForm;
 
 public class Coffee extends Skill {
     private int hpBonus;
     public Coffee() {
         super("Кофе");
-        this.hpBonus = 20;
+        this.hpBonus = 125;
     }
-    public void heal(Hero hero){
-        hero.setHp(hero.getHp() + hpBonus);
-        if (hero.getHp() > 100){
-            hero.setHp(100);
-        }
+
+    public void use(Teacher teacher) {
+        Hero hero = Hero.getInstance();
+        hero.setHp(hero.getHp()+hpBonus);
+        hero.testHP();
+    }
+    public String notification(){
+        return "Вы вылечились на " + hpBonus;
     }
 }

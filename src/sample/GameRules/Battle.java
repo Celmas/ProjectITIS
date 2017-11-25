@@ -1,6 +1,6 @@
 package sample.GameRules;
 
-import sample.GameRules.Lectors.Zubkov;
+import sample.GameRules.Lectors.Arslanov;
 import sample.GameRules.Practicer.Korneeva;
 
 import java.util.Random;
@@ -60,9 +60,9 @@ public class Battle {
         }
     }
     public static void main(String[] args) {
-        Hero hero = new Hero("Ilnur", 200);
+        Hero hero = Hero.getInstance();
         while (true){
-            Teacher zubkov = new Zubkov();
+            Teacher zubkov = new Arslanov();
             Teacher korneeva = new Korneeva();
             Teacher[] teachers = {zubkov, korneeva};
             choose(teachers);
@@ -71,7 +71,7 @@ public class Battle {
                 case 0:
                     System.out.println("ZZZZZZZZZZZZZZZZZZZZ");
                     System.out.println("Урааа, сон");
-                    hero.sleep();
+                    hero.sleep(50);
                     hero.testHP();
                     System.out.println("Ваши жизни " + hero.hp);
                     break;

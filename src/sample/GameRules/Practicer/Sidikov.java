@@ -6,11 +6,11 @@ import sample.GameRules.Teacher;
 
 import java.util.Random;
 
-public class Korneeva extends Teacher{
+public class Sidikov extends Teacher {
     private String reward;
 
-    public Korneeva() {
-        super("Корнеева Н.Н.", 35, 25);
+    public Sidikov() {
+        super("Сидиков М.Р.", 75, 75);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Korneeva extends Teacher{
         alert.setHeaderText(null);
         Hero hero = Hero.getInstance();
         giveReward(hero);
-        alert.setContentText("Вы прошли практику по Математическому анализу\nИ получаете: " + reward);
+        alert.setContentText("Вы прошли практику по Информатики\nИ получаете: " + reward);
         alert.showAndWait();
     }
 }
