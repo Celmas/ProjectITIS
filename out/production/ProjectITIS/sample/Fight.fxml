@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FightController">
+   <children>
+      <Label fx:id="lvlHero" layoutX="41.0" layoutY="28.0" prefHeight="38.0" prefWidth="207.0" text="LVL">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="hpHero" layoutX="41.0" layoutY="79.0" prefHeight="38.0" prefWidth="207.0" text="HP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="teacher" layoutX="634.0" layoutY="23.0" prefHeight="49.0" prefWidth="207.0" text="Teacher">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="hpTeacher" layoutX="632.0" layoutY="86.0" prefHeight="38.0" prefWidth="166.0" text="HP">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="first" layoutX="68.0" layoutY="255.0" mnemonicParsing="false" onAction="#setSkill1" prefHeight="38.0" prefWidth="323.0" />
+      <Button fx:id="second" layoutX="68.0" layoutY="330.0" mnemonicParsing="false" onAction="#setSkill2" prefHeight="38.0" prefWidth="323.0" />
+      <Button fx:id="third" layoutX="68.0" layoutY="402.0" mnemonicParsing="false" onAction="#setSkill3" prefHeight="38.0" prefWidth="323.0" />
+      <Label fx:id="logBot" alignment="CENTER" layoutX="178.0" layoutY="117.0" prefHeight="116.0" prefWidth="433.0" text="Log BOT" wrapText="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="175.0" onMouseClicked="#useCheat" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/Cheat.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="293.0" onMouseClicked="#useCoffee" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/Coffe.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="402.0" onMouseDragged="#useEnergetic" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/Energetic.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="countOfCheat" layoutX="808.0" layoutY="203.0" text="number">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="countOfCoffee" layoutX="808.0" layoutY="321.0" text="number">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="countOfEnergetic" layoutX="808.0" layoutY="430.0" text="number">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
