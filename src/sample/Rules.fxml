@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RuleController">
+   <children>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="73.0" prefWidth="960.0" text="Правила игры">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="ruleDescribe" alignment="CENTER" layoutX="1.0" layoutY="74.0" prefHeight="392.0" prefWidth="960.0" text="Описание правил">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="ruleBack" layoutY="479.0" mnemonicParsing="false" onAction="#toMenu" prefHeight="61.0" prefWidth="960.0" text="Назад" />
+   </children>
+</Pane>
