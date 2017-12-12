@@ -17,8 +17,9 @@
             <Font size="38.0" />
          </font>
       </Label>
-      <Button fx:id="startGame" layoutX="355.0" layoutY="205.0" mnemonicParsing="false" onAction="#toFight" prefHeight="31.0" prefWidth="269.0" text="НАЧАТЬ ИГРУ" />
-      <Button fx:id="rules" layoutX="356.0" layoutY="292.0" mnemonicParsing="false" onAction="#toRules" prefHeight="31.0" prefWidth="269.0" text="ПРАВИЛА ИГРЫ" />
-      <Button fx:id="out" layoutX="355.0" layoutY="378.0" mnemonicParsing="false" onAction="#toExit" prefHeight="31.0" prefWidth="269.0" text="ВЫХОД" />
+      <Button fx:id="startGame" layoutX="355.0" layoutY="205.0" mnemonicParsing="false" onAction="#toNewGame" prefHeight="31.0" prefWidth="269.0" text="НАЧАТЬ ИГРУ" />
+      <Button fx:id="rules" layoutX="355.0" layoutY="344.0" mnemonicParsing="false" onAction="#toRules" prefHeight="31.0" prefWidth="269.0" text="ПРАВИЛА ИГРЫ" />
+      <Button fx:id="out" layoutX="356.0" layoutY="416.0" mnemonicParsing="false" onAction="#toExit" prefHeight="31.0" prefWidth="269.0" text="ВЫХОД" />
+      <Button fx:id="continueGame" layoutX="356.0" layoutY="276.0" mnemonicParsing="false" onAction="#toFight" prefHeight="31.0" prefWidth="269.0" text="ПРОДОЛЖИТЬ ИГРУ" />
    </children>
 </Pane>

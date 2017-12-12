@@ -11,7 +11,7 @@ public class Shurygin extends Teacher {
     private String reward;
 
     public Shurygin() {
-        super("Шурыгин 0.0", 50, 50);
+        super("Шурыгин В.В.", 50, 50);
     }
 
     @Override

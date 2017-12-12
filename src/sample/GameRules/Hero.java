@@ -1,10 +1,12 @@
 package sample.GameRules;
 
 import javafx.scene.control.Alert;
+import sample.FightController;
 import sample.GameRules.Bufs.Cheat;
 import sample.GameRules.Bufs.Coffee;
 import sample.GameRules.Bufs.Energetic;
 import sample.GameRules.Skills.Thinking;
+import sample.SelectionController;
 
 public class Hero extends UnitForm {
     protected Skill buffs[] = {new Cheat(), new Coffee(), new Energetic()};
@@ -72,6 +74,28 @@ public class Hero extends UnitForm {
     public void sleep(int x){
         this.hp += x;
         testHP();
+    }
+    public void reset(){
+        newLVL = 150;
+        hp = 500;
+        realHP = hp;
+        lvl = 0;
+        xp = 0;
+        skills = new Skill[5];
+        skills[0] = new Thinking();
+        for (int i = 1; i < 5; i++){
+            skills[i] = null;
+        }
+        i = 1;
+        countOfBuffs = new int[3];
+        for (int i = 0; i < countOfBuffs.length;i++ ) {
+            countOfBuffs[i] = 0;
+        }
+        FightController.setSecond(false);
+        FightController.setThird(false);
+        SelectionController.setIsThird(false);
+        SelectionController.setIsSecond(false);
+        SelectionController.setIsFirst(false);
     }
 
     public int getRealHP() {

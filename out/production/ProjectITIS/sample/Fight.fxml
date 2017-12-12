@@ -46,7 +46,7 @@
             <Image url="@Resources/Coffe.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="402.0" onMouseDragged="#useEnergetic" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="402.0" onMouseClicked="#useEnergetic" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Resources/Energetic.jpg" />
          </image>

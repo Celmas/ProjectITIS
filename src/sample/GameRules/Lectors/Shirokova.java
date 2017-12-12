@@ -10,7 +10,7 @@ import sample.GameRules.Teacher;
 public class Shirokova extends Teacher {
     private final String reward = "Списать";
     public Shirokova() {
-        super("Широкова 0.0", 100, 100);
+        super("Широкова Е.А", 100, 100);
         this.setDmg(35);
     }
 
