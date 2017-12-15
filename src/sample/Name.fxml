@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NameController">
+   <children>
+      <Label fx:id="name" layoutX="90.0" layoutY="91.0" prefHeight="150.0" prefWidth="364.0" text="Имя персонажа:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Cambria" size="42.0" />
+         </font>
+      </Label>
+      <Button fx:id="ready" layoutX="288.0" layoutY="280.0" mnemonicParsing="false" onAction="#toFirst" prefHeight="150.0" prefWidth="364.0" text="Далее">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Button>
+      <TextField fx:id="text" layoutX="454.0" layoutY="91.0" prefHeight="150.0" prefWidth="418.0">
+         <font>
+            <Font size="56.0" />
+         </font></TextField>
+   </children>
+</Pane>
