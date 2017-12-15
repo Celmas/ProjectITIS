@@ -8,7 +8,7 @@ public class Cheat extends Skill {
     private int dmg;
     public Cheat() {
         super("Шпаргалка");
-        this.dmg = 200;
+        this.dmg = 50;
     }
 
     public void use(Teacher teacher){

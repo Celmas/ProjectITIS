@@ -5,12 +5,13 @@ import sample.FightController;
 import sample.GameRules.Hero;
 import sample.GameRules.Skills.Dancing;
 import sample.GameRules.Teacher;
+import sample.SelectionController;
 
 public class Arslanov extends Teacher{
     private final String reward = "Танцевать с бубном";
     public Arslanov() {
-        super("Арсланов М.М", 175, 175);
-        this.setDmg(60);
+        super("Арсланов М.М", 230, 100);
+        this.setDmg(40);
     }
     @Override
     public void giveReward(Hero hero) {
@@ -25,6 +26,7 @@ public class Arslanov extends Teacher{
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Поздравляем!");
         alert.setHeaderText(null);
+        SelectionController.setIsThirdLector(true);
         Hero hero = Hero.getInstance();
         if (!FightController.isIsThird()) s = "\nИ получаете новый скилл: " + reward;
         giveReward(hero);

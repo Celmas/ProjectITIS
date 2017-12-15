@@ -10,7 +10,7 @@ public class Energetic extends Skill {
     private Hero hero;
     public Energetic() {
         super("Энергетический напиток");
-        this.hpBonus = 170;
+        this.hpBonus = 75;
         hero = Hero.getInstance();
     }
 

@@ -22,6 +22,8 @@ public class SelectionController {
     private static boolean isFirst = false;
     private static boolean isSecond = false;
     private static boolean isThird = false;
+    private static boolean isSecondLector = false;
+    private static boolean isThirdLector = false;
 
     @FXML
     private ProgressBar hp;
@@ -61,6 +63,14 @@ public class SelectionController {
         SelectionController.isThird = isThird;
     }
 
+    public static void setIsSecondLector(boolean isSecondLector) {
+        SelectionController.isSecondLector = isSecondLector;
+    }
+
+    public static void setIsThirdLector(boolean isThirdLector) {
+        SelectionController.isThirdLector = isThirdLector;
+    }
+
 
     @FXML
     public void initialize() {
@@ -70,10 +80,10 @@ public class SelectionController {
         if (!isFirst){
             lectorsBtn1.setDisable(true);
         }
-        if (!isSecond){
+        if (!isSecond || !isSecondLector){
             lectorsBtn2.setDisable(true);
         }
-        if (!(isThird && isFirst && isSecond)){
+        if (!(isThird && isThirdLector)){
             lectorsBtn3.setDisable(true);
         }
 

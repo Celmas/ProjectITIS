@@ -20,12 +20,12 @@ public class Hero extends UnitForm {
     private static final Hero instance;
 
     static {
-        instance = new Hero("Задрот", 500);
+        instance = new Hero("Задрот", 100);
     }
 
     private Hero(String name, int hp) {
         super(name, hp);
-        newLVL = 150;
+        newLVL = 100;
         realHP = hp;
         lvl = 0;
         skills = new Skill[5];
@@ -76,8 +76,8 @@ public class Hero extends UnitForm {
         testHP();
     }
     public void reset(){
-        newLVL = 150;
-        hp = 500;
+        newLVL = 100;
+        hp = 9000;
         realHP = hp;
         lvl = 0;
         xp = 0;

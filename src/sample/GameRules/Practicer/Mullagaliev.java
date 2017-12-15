@@ -11,7 +11,8 @@ public class Mullagaliev extends Teacher{
     private String reward;
 
     public Mullagaliev() {
-        super("Муллагалиев Э.А.", 35, 25);
+        super("Муллагалиев Э.А.", 80, 20);
+        this.setDmg(10);
     }
 
     @Override

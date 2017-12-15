@@ -18,7 +18,7 @@
             <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="teacher" layoutX="634.0" layoutY="23.0" prefHeight="49.0" prefWidth="207.0" text="Teacher">
+      <Label fx:id="teacher" layoutX="634.0" layoutY="23.0" prefHeight="49.0" prefWidth="294.0" text="Teacher">
          <font>
             <Font size="26.0" />
          </font>
@@ -31,12 +31,12 @@
       <Button fx:id="first" layoutX="68.0" layoutY="255.0" mnemonicParsing="false" onAction="#setSkill1" prefHeight="38.0" prefWidth="323.0" />
       <Button fx:id="second" layoutX="68.0" layoutY="330.0" mnemonicParsing="false" onAction="#setSkill2" prefHeight="38.0" prefWidth="323.0" />
       <Button fx:id="third" layoutX="68.0" layoutY="402.0" mnemonicParsing="false" onAction="#setSkill3" prefHeight="38.0" prefWidth="323.0" />
-      <Label fx:id="logBot" alignment="CENTER" layoutX="178.0" layoutY="117.0" prefHeight="116.0" prefWidth="433.0" text="Log BOT" wrapText="true">
+      <Label fx:id="logBot" alignment="CENTER" layoutX="100.0" layoutY="117.0" prefHeight="116.0" prefWidth="521.0" text="Log BOT" wrapText="true">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <ImageView fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="175.0" onMouseClicked="#useCheat" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="cheat" fitHeight="93.0" fitWidth="108.0" layoutX="703.0" layoutY="175.0" onMouseClicked="#useCheat" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Resources/Cheat.jpg" />
          </image>

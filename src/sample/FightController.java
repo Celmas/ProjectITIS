@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import sample.GameRules.Hero;
 import sample.GameRules.Lectors.Arslanov;
@@ -21,6 +23,8 @@ public class FightController{
     private static Hero hero;
     private static boolean isSecond = false;
     private static boolean isThird = false;
+    private static boolean isWon = false;
+
     @FXML
     private Label countOfCheat;
     @FXML
@@ -54,16 +58,20 @@ public class FightController{
         countOfEnergetic.setText("x" + hero.countOfBuffs[2]);
     }
     public void checkTeacher(){
+
         if (current.getHp() < 1){
             current.setHp(0);
             current.lost();
-            try {
+            if (isWon){
+                toGreetings();
+            }else try {
                 hero.nextLVL();
                 toSelection();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
+
 
     }
 
@@ -92,13 +100,12 @@ public class FightController{
         hpTeacher.setText(String.valueOf(current.getHp()));
         hpHero.setText(String.valueOf(hero.getHp()));
         logBot.setText("Преподователь: " + current.getName());
-        first.setText("Придумать на ходу");
-        second.setText("Списать");
+        first.setText("Заглянуть в чертоги разума");
+        second.setText("Доказать теорию струн");
         third.setText("Танцевать с бубном");
         countOfCheat.setText("x" + hero.countOfBuffs[0]);
         countOfCoffee.setText("x" + hero.countOfBuffs[1]);
         countOfEnergetic.setText("x" + hero.countOfBuffs[2]);
-
 
         if (!isSecond){
             second.setDisable(true);
@@ -142,13 +149,17 @@ public class FightController{
     public void useCoffee(){
         if (hero.countOfBuffs[1] > 0) {
             round(true, 1);
-        }else createAlertOfNULL("коффе");
+        }else createAlertOfNULL("кофе");
     }
     @FXML
     public void useEnergetic(){
         if (hero.countOfBuffs[2] > 0) {
             round(true, 2);
         }else createAlertOfNULL("энергетиков");
+    }
+
+    public static void setIsWon(boolean isWon) {
+        FightController.isWon = isWon;
     }
 
     @FXML
@@ -170,7 +181,30 @@ public class FightController{
         if (hero.getHp() < 1){
             logBot.setText("Вы не сдали экзамен");
             hero.toDie();
-            System.exit(0);
+            Parent root;
+            try {
+                root = FXMLLoader.load(getClass().getResource("Army.fxml"));
+                Stage stage=(Stage) first.getScene().getWindow();
+                stage.setTitle("Жизнь в ИТИСе");
+                stage.setScene(new Scene(root, 960, 540));
+                stage.setResizable(false);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public void toGreetings(){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("greetings.fxml"));
+            Stage stage=(Stage) first.getScene().getWindow();
+            stage.setTitle("Жизнь в ИТИСе");
+            MenuController.setIsStarted(false);
+            stage.setScene(new Scene(root, 960, 540));
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

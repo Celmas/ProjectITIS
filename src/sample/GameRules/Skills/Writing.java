@@ -4,7 +4,7 @@ import sample.GameRules.Skill;
 
 public class Writing extends Skill {
     public Writing() {
-        super("Списать");
+        super("Доказать теорию струн");
     }
 
     @Override

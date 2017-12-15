@@ -59,6 +59,7 @@ public class MenuController {
         stage.setScene(new Scene(root, 960, 540));
         stage.setResizable(false);
         stage.show();
+        FightController.setIsWon(false);
         hero.reset();
 
     }

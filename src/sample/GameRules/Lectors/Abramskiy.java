@@ -2,6 +2,7 @@ package sample.GameRules.Lectors;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import sample.FightController;
 import sample.GameRules.Hero;
 import sample.GameRules.Skills.Writing;
 import sample.GameRules.Teacher;
@@ -9,8 +10,8 @@ import sample.GameRules.Teacher;
 public class Abramskiy extends Teacher {
     private final String reward = "toDo";//toDo
     public Abramskiy() {
-        super("Абрамский М.М.", 250, 250);
-        this.setDmg(100);
+        super("Абрамский М.М.", 330, 150);
+        this.setDmg(60);
     }
 
     @Override
@@ -20,10 +21,6 @@ public class Abramskiy extends Teacher {
 
     @Override
     public void lost() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Поздравляем!");
-        alert.setHeaderText(null);
-        alert.setContentText("Вы сдали экзамен по Информатики\nИ прошли эту замечательную игру");
-        alert.showAndWait();
+        FightController.setIsWon(true);
     }
 }

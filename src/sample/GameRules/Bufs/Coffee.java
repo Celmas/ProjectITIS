@@ -9,7 +9,7 @@ public class Coffee extends Skill {
     private int hpBonus;
     public Coffee() {
         super("Кофе");
-        this.hpBonus = 125;
+        this.hpBonus = 50;
     }
 
     public void use(Teacher teacher) {

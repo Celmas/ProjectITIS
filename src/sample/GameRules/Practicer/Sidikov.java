@@ -12,6 +12,7 @@ public class Sidikov extends Teacher {
 
     public Sidikov() {
         super("Сидиков М.Р.", 75, 75);
+        this.setDmg(50);
     }
 
     @Override

@@ -4,7 +4,7 @@ import sample.GameRules.Skill;
 
 public class Thinking extends Skill {
     public Thinking() {
-        super("Придумать на ходу");
+        super("Заглянуть в чертоги разума");
     }
 
     @Override

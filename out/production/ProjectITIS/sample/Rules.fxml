@@ -7,12 +7,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RuleController">
    <children>
-      <Label alignment="CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="73.0" prefWidth="960.0" text="Правила игры">
+      <Label alignment="CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="73.0" prefWidth="960.0" text="Советы по игре  ">
          <font>
             <Font size="33.0" />
          </font>
       </Label>
-      <Label fx:id="ruleDescribe" alignment="CENTER" layoutX="1.0" layoutY="74.0" prefHeight="392.0" prefWidth="960.0" text="Описание правил">
+      <Label fx:id="ruleDescribe" alignment="CENTER" layoutX="1.0" layoutY="74.0" lineSpacing="1.0" prefHeight="392.0" prefWidth="960.0" text="1. Как правило атаковать сначала надо преподавателей-практиков, чтобы получить уровень(в следствии которого повышается сила) и набрать как можно больше вспомогательных предметов(кофе, энергетик и шпаргалка).&#10;2. Советуем собирать вспомогательные предметы (без них будет очень сложно подготовиться), чтобы успешно сдать экзамен преподавателям-лекторам.&#10;3. Не забывайте Отдыхать, без небольшого перерыва в учебе вы долго не продержитесь!&#10;4. Если вы не уверены, стоит ли сдавать экзамены сейчас, вы всегда можете начать Новую игру.&#10;5. Для успешного прохождения сессии, не забывайте, лучше начать со сдачи несложных экзаменов, так у Вас будет время подтянуть свои знания по сложным предметам.&#10;6. Удачной сессии!" wrapText="true">
          <font>
             <Font size="22.0" />
          </font>
